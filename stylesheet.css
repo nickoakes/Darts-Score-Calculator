@@ -1,0 +1,106 @@
+html {
+    background: url("http://modusdarts.tv/wp-content/uploads/2013/04/PREMLGESHEFFLD-GENERALVIEW3.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	height: auto;
+	width: auto;
+	max-width: 1080px;
+	margin: 0 auto !important;
+	float: none !important;
+}
+
+h1 {
+	font-family: 'Permanent Marker', cursive;
+	text-shadow: 2px 2px black;
+	text-align: center;
+	color: white;
+	font-size: 50px
+}
+
+.button {
+	font-size: 20px;
+	font-family: 'Permanent Marker', cursive;
+	box-shadow: 2px 2px white;
+	max-width: 200px;
+	white-space: normal;
+	}
+
+/*dartboard*/
+
+.red {
+	background: #e83a3a;
+	cursor: pointer;
+}
+
+.green {
+	background: #0c8c17;
+	cursor: pointer;
+
+}
+
+.black {
+	background: black;
+	cursor: pointer;
+}
+
+.beige {
+	background: #f2e7bc;
+	cursor: pointer;
+	color: black;
+}
+
+
+#board {
+	font-family: 'Trade Winds', cursive;
+	color: white;
+	font-weight: bold;
+	background: black;
+	opacity: 0.70;
+	font-size: 20px;
+	float: left;
+	position: relative;
+}
+
+/*table elements*/
+
+td {
+	width: 35px;
+	height:35px;
+	text-align: center;
+}
+
+th {
+	text-align: center;
+}
+
+
+/*scores elements*/
+
+#scores {
+	font-family: 'Permanent Marker', cursive;
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+	float: left;
+	position: relative;
+	margin: auto;
+	background: black;
+	opacity: 0.9;
+	max-width: 500px;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+#bully {
+	float: center;
+}
+
+.highlight {
+	background: grey;
+}
+
+#checkoutCell #checkout {
+	color: white;
+	vertical-align: middle;
+}
