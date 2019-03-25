@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculate your darts score!</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="app.js"></script>
+		
+        <link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="animate.css">
+		<link href="https://fonts.googleapis.com/css?family=Faster+One|Permanent+Marker|Trade+Winds" rel="stylesheet">    
+		</head>
+    <body>
+        <h1>Darts Score Calculator</h1>
+        <div id="board-area">
+            <table id="board">
+                <tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="double red" data="40">D</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="double green" data="10">D</td>
+					<td></td>
+					<td></td>
+					<td class="single black" data="20">20</td>
+					<td></td>
+					<td></td>
+					<td class="double green" data="2">D</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td class="double red" data="24">D</td>
+					<td></td>
+					<td class="single beige" data="5">5</td>
+					<td></td>
+					<td class="triple red" id="t20" data="60">T</td>
+					<td></td>
+					<td class="single beige" data="1">1</td>
+					<td></td>
+					<td class="double red" data="36">D</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="double green" data="18">D</td>
+					<td></td>
+					<td class="single black" data="12">12</td>
+					<td></td>
+					<td class="triple green" data="15">T</td>
+					<td></td>
+					<td class="triple green" data="3">T</td>
+					<td></td>
+					<td class="single black" data="18">18</td>
+					<td></td>
+					<td class="double green" data="8">D</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td class="single beige" data="9">9</td>
+					<td></td>
+					<td class="triple red" data="36">T</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="triple red lucky" data="54">T</td>
+					<td></td>
+					<td class="single beige" data="4">4</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="triple green" data="27">T</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="triple green" data="12">T</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="double red" data="28">D</td>
+					<td class="single black" data="14">14</td>
+					<td class="triple red" data="42">T</td>
+					<td></td>
+					<td></td>
+					<td class="outerbull green" data="25"></td>
+					<td class="outerbull green" data="25"></td>
+					<td class="outerbull green" data="25"></td>
+					<td></td>
+					<td></td>
+					<td class="triple red" data="39">T</td>
+					<td class="single black" data="13">13</td>
+					<td class="double red" data="26">D</td>
+				</tr>
+				<tr>
+					<td class="double green" data="22">D</td>
+					<td class="single beige" data="11">11</td>
+					<td class="triple green" data="33">T</td>
+					<td></td>
+					<td></td>
+					<td class="outerbull green" data="25"></td>
+					<td class="bull red" data="50"></td>
+					<td class="outerbull green" data="25"></td>
+					<td></td>
+					<td></td>
+					<td class="triple green" data="18">T</td>
+					<td class="single beige" data="6">6</td>
+					<td class="double green" data="12">D</td>
+				</tr>
+				<tr>
+					<td class="double red" data="16">D</td>
+					<td class="single black" data="8">8</td>
+					<td class="triple red" data="24">T</td>
+					<td></td>
+					<td></td>
+					<td class="outerbull green" data="25"></td>
+					<td class="outerbull green" data="25"></td>
+					<td class="outerbull green" data="25"></td>
+					<td></td>
+					<td></td>
+					<td class="triple red" data="30">T</td>
+					<td class="single black" data="10">10</td>
+					<td class="double red" data="20">D</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="triple green lucky" data="48">T</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="triple green lucky" data="45">T</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td class="single beige" data="16">16</td>
+					<td></td>
+					<td  class="triple red" data="21">T</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td  class="triple red" data="6">T</td>
+					<td></td>
+					<td class="single beige" data="15">15</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="double green" data="32">D</td>
+					<td></td>
+					<td class="single black" data="7">7</td>
+					<td></td>
+					<td class="triple green" data="57">T</td>
+					<td  class="triple red" data="9">T</td>
+					<td class="triple green lucky" data="51">T</td>
+					<td></td>
+					<td class="single black" data="2">2</td>
+					<td></td>
+					<td class="double green" data="30">D</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td class="double red" data="14">D</td>
+					<td></td>
+					<td class="single beige" data="19">19</td>
+					<td></td>
+					<td class="single black" data="3">3</td>
+					<td></td>
+					<td class="single beige" data="17">17</td>
+					<td></td>
+					<td class="double red" data="4">D</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="double green" data="38">D</td>
+					<td></td>
+					<td></td>
+					<td class="double red" data="6">D</td>
+					<td></td>
+					<td></td>
+					<td class="double green" data="34">D</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+            </table>
+        </div>
+		<div id="scores">
+			<table id="scoreboard">
+				<tr>
+					<th colspan="5" height="250px" width="450px">
+						<img id="bully" width="200px" src="http://www.bullseyetvgameshow.com/wp-content/themes/bullseye/images/bully-home.jpg" hidden>
+						<img id="phil" width="200px" src="http://news.images.itv.com/image/file/140952/article_89d7fd2e829e655f_1356963761_9j-4aaqsk.jpeg" hidden>
+						<img id="winmau" width="200px" src="data:image/png;base64,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">
+						<img id="dyson" width="200px" src="https://images-na.ssl-images-amazon.com/images/I/41i76YFrvzL._SX355_.jpg" hidden>
+					</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th id="p1ScoreCell"><strong></strong><span id="p1ScoreName"></span></th>
+					<th></th>
+					<th></th>
+					<th id="p2ScoreCell"><strong></strong><span id="p2ScoreName"></span></th>
+				</tr>
+				<tr colspan="5">
+					<td height="300px" id="checkoutCell" colspan="5"><a id="checkout" target="_blank" href="http://dartsinfoworld.com/darts-checkout-table.pdf" hidden>Checkout Chart</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Games:&nbsp;<span id="p1Games">0</span></td>
+					<td></td>
+					<td></td>
+					<td>Games:&nbsp;<span id="p2Games">0</span></td>
+				</tr>
+				<tr>
+					<td width="100px"></td>
+					<td width="250px"><span id="p1Score">501</span><span id="p1Double" hidden></span></td>
+					<td></td>
+					<td></td>
+					<td width="250px"><span id="p2Score">501</span><span id="p2Double" hidden>.</span></td>
+				</tr>
+				<tr>
+					<td width="100px"></td>
+					<td><input type="button" class="button" id="p1Throw"></td>
+					<td></td>
+					<td></td>
+					<td><input type="button" class="button" id="p2Throw"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="button" class="button" id="newGame" value="New Game"></td>
+					<td></td>
+					<td></td>
+					<td><input type="button" class="button" id="newMatch" value="New Match"></td>
+				</tr>
+				
+			</table>
+		</div>
+    </body>
+</html>
